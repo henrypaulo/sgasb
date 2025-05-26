@@ -49,6 +49,9 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
+          <li><a href="#hero">Home</a></li>
+
           <li><a href="#team">Team</a></li>
           <li><a href="#saloes">Salões</a></li>
           <li><a href="#contact">Contact</a></li>
