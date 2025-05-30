@@ -49,13 +49,10 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero">Home</a></li>
-                    <li><a href="#hero">Home</a></li>
-          <li><a href="#hero">Home</a></li>
-
           <li><a href="#team">Team</a></li>
           <li><a href="#saloes">Salões</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="#contact">Perguntar</a></li>
+          <li class="dropdown"><a href="#"><span>Entrar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="{{route('loginCliente')}}">Cliente</a></li>
               <li><a href="{{route('loginSalao')}}">Salão</a></li>
@@ -82,7 +79,7 @@
         <h2 data-aos="fade-up" style="text-align: center;" data-aos-delay="100">Agende rapidamente um serviço de beleza</h2>
         <p data-aos="fade-up" data-aos-delay="200">A melhor plataforma de agendamentos em salões de beleza</p>
         <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="{{url('/criar_conta')}} " class="btn-get-started">Faça o seu cadastro</a>
+          <a href="{{url('/criar_conta')}} " class="btn-get-started">Me cadastrar</a>
         </div>
       </div>
 
@@ -151,7 +148,7 @@
 A nossa plataforma permite o agendamento de serviços de beleza de forma             </p>
                 <ul>
                   <li><i class="bi bi-check2-all"></i>
-                    <spab>Rápida.</spab>
+                    <span>Rápida.</span>
                   </li>
                   <li><i class="bi bi-check2-all"></i> <span>Prática</span>.</li>
                   <li><i class="bi bi-check2-all"></i> <span>Segura</span></li>
@@ -232,7 +229,7 @@ A nossa plataforma permite o agendamento de serviços de beleza de forma        
 
             <div class="navbar" style="display: inline; align-items: center; justify-content: center;margin-left: 5rem;" >
               <form class="form-inline" style="display: inline;">
-                  <input style="display: inline;width:25rem;"  class="form-control mr-sm-2" style="display: inline;" type="search" placeholder="Serviço" aria-label="Search">
+                  <input style="display: inline;width:25rem;"  class="form-control mr-sm-2"  type="search" placeholder="Serviço" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" style="background-color: #811be1ce;color: azure;border:0px" type="submit">Procurar</button>
               </form>
             </div>
@@ -369,8 +366,8 @@ A nossa plataforma permite o agendamento de serviços de beleza de forma        
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contactos</h2>
-        <p>Dê-nos um feedback</p>
+        <h2>Perguntas</h2>
+        <p>O que gostarias de saber?</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -437,6 +434,7 @@ A nossa plataforma permite o agendamento de serviços de beleza de forma        
               </div>
             </form>
           </div><!-- End Contact Form -->
+          
 
         </div>
 
@@ -500,7 +498,6 @@ A nossa plataforma permite o agendamento de serviços de beleza de forma        
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
-  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -511,7 +508,7 @@ A nossa plataforma permite o agendamento de serviços de beleza de forma        
   <script src="{{asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{asset('vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
   <script src="{{asset('vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-
+ 
   <!-- Main JS File -->
   <script src="{{asset('js/main.js')}}"></script>
 

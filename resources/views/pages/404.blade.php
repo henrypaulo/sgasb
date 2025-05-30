@@ -845,10 +845,10 @@
               404
             </h1>
             <p class="text-gray-700 dark:text-gray-300">
-              Page not found. Check the address or
+              Página não encontrada
               <a
                 class="text-purple-600 hover:underline dark:text-purple-300"
-                href="../index.html"
+                href="{{url('/criar_conta')}}"
               >
                 go back
               </a>

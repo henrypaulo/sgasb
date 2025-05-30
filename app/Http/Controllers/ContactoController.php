@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Support\Facades\Mail;
-
 use Illuminate\Http\Request;
 
 class ContactoController extends Controller
@@ -14,17 +13,14 @@ class ContactoController extends Controller
     {
         
         $dados = $request->validate([
-            'name' => 'required|string',
+            'name' => 'required',
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
 
-        Mail::raw($dados['message'], function ($msg) use ($dados) {
-            $msg->to('brainerpaulo45@gmail.com')
-                ->subject('Novo feedback do SGASB')
-                ->from($dados['email'], $dados['name']);
-        });
+        
+        return "0";
 
-        return back()->with('success', 'Mensagem enviada com sucesso!');
+
     }
 }

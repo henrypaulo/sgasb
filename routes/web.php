@@ -9,7 +9,7 @@ use App\Http\Controllers\ClienteAuthController;
 use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('port');
-});
+})->name('inicio');
 Route::get('/dash_cliente', function () {
     return view('dash_cliente');
 });
@@ -30,7 +30,7 @@ Route::get('/portfolio_details', function () {
     return view('portfolio_details');
 });
 
-Route::post('/', [ContactoController::class, 'enviar'])->name('enviarFbacks');
+Route::post('/enviar-feedback', [ContactoController::class, 'enviar'])->name('enviarFbacks');
 Route::get('/forgot-password', function () {
     return view('pages.forgot-password');
 })->name('forgot-password');
