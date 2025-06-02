@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
-    ],
+   'defaults' => [
+    'guard' => 'cliente',
+    'passwords' => 'clientes',
+],
 
     /*
     |--------------------------------------------------------------------------
@@ -36,30 +36,29 @@ return [
     */
 
     'guards' => [
-        'cliente' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-        'salao' => [
-            'driver' => 'session',
-            'provider' => 'saloes',
-        ],
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
     ],
+
+    'cliente' => [
+        'driver' => 'session',
+        'provider' => 'clientes',
+    ],
+
     
-    'providers' => [
-        'clientes' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Cliente::class,
-        ],
-
-        'saloes' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Salao::class,
-        ],
-        
-        
-
     ],
+    'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\User::class,
+    ],
+
+    'clientes' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Cliente::class,
+    ],
+],
 
     /*
     |--------------------------------------------------------------------------
@@ -77,18 +76,6 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
-    ],
 
     /*
     |--------------------------------------------------------------------------

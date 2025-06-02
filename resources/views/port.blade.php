@@ -54,7 +54,7 @@
           <li><a href="#contact">Perguntar</a></li>
           <li class="dropdown"><a href="#"><span>Entrar</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="{{route('loginCliente')}}">Cliente</a></li>
+              <li><a href="{{route('cliente.formLogin')}}">Cliente</a></li>
               <li><a href="{{route('loginSalao')}}">Salão</a></li>
             </ul>
           </li>

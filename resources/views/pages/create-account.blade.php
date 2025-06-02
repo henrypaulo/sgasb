@@ -28,13 +28,13 @@
             <img
               aria-hidden="true"
               class="object-cover w-full h-full dark:hidden"
-              src="{{asset('img/create-account-office.jpeg')}}"
+              src="{{asset('img/close-homem-cortando-cabelo_23-2149141758.jpg')}}"
               alt="Office"
             />
             <img
               aria-hidden="true"
               class="hidden object-cover w-full h-full dark:block"
-              src="{{asset('img/close-homem-cortando-cabelo_23-2149141758.avif')}}"
+              src="{{asset('img/close-homem-cortando-cabelo_23-2149141758.jpg')}}"
               alt="Office"
             />
           </div>
@@ -65,27 +65,28 @@
   <div id="cliente-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
     <div class="bg-white rounded-lg p-6 w-96">
       <h2 class="text-xl font-bold mb-4">Cadastro de Cliente</h2>
-      <form>
+      <form action="{{ route('cliente.cadastrar') }}" method="POST" class="space-y-4">
+        @csrf
         <label for="nome-cliente" class="block text-sm font-medium text-gray-700">Nome</label>
-        <input type="text" id="nome-cliente" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Digite o nome do cliente">
+<input type="text" id="nome-cliente" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Digite o nome do cliente">
 
-        <label for="email-cliente" class="block text-sm font-medium text-gray-700 mt-4">Email</label>
-        <input type="email" id="email-cliente" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Digite o email do cliente">
+<label for="email-cliente" class="block text-sm font-medium text-gray-700 mt-4">Email</label>
+<input type="email" id="email-cliente" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Digite o email do cliente">
 
-          <!-- Telefones -->
-      <label class="block text-sm font-medium text-gray-700 mt-4">Telefone(s)</label>
-      <div id="telefones-cliente-wrapper">
-        <input type="tel" name="telefones[]" class="mt-1 block w-full p-2 border border-gray-300 rounded-md mb-2" placeholder="Ex: +244 912 345 678">
-      </div>
+<label class="block text-sm font-medium text-gray-700 mt-4">Telefone(s)</label>
+<div id="telefones-cliente-wrapper">
+  <input type="tel" name="telefones[]" class="mt-1 block w-full p-2 border border-gray-300 rounded-md mb-2" placeholder="Ex: 912 345 678">
+</div>
+
       <button type="button" onclick="adicionarTelefone('telefones-cliente-wrapper')" class="text-sm text-purple-600 hover:underline mb-2">+ Adicionar outro número</button>
 
-         <!-- Campo de Senha -->
-      <label for="senha-cliente" class="block text-sm font-medium text-gray-700 mt-4">Senha</label>
-      <input type="password" id="senha-cliente" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Digite sua senha">
 
-      <!-- Campo de Confirmação de Senha -->
-      <label for="confirma-senha-cliente" class="block text-sm font-medium text-gray-700 mt-4">Confirmar Senha</label>
-      <input type="password" id="confirma-senha-cliente" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Confirme sua senha">
+<label for="senha-cliente" class="block text-sm font-medium text-gray-700 mt-4">Senha</label>
+<input type="password" id="senha-cliente" name="password" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Digite sua senha">
+
+<label for="confirma-senha-cliente" class="block text-sm font-medium text-gray-700 mt-4">Confirmar Senha</label>
+<input type="password" id="confirma-senha-cliente" name="password_confirmation" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Confirme sua senha">
+
         <div class="mt-4 flex justify-end">
           <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded-md mr-2" id="close-cliente-modal">  Voltar</button>
           <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded-md">Cadastrar</button>
@@ -250,7 +251,7 @@
     const input = document.createElement('input');
     input.type = 'tel';
     input.name = 'telefones[]';
-    input.placeholder = 'Ex: +244 9XX XXX XXX';
+    input.placeholder = 'Ex: 9XX XXX XXX';
     input.className = 'mt-1 block w-full p-2 border border-gray-300 rounded-md mb-2';
     wrapper.appendChild(input);
   }

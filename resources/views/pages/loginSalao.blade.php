@@ -25,13 +25,13 @@
             <img
               aria-hidden="true"
               class="object-cover w-full h-full dark:hidden"
-              src="{{asset('img/bg.jpg')}}"
+              src="{{asset('img/fachada-salao.jpg')}}"
               alt="Office"
             />
             <img
               aria-hidden="true"
               class="hidden object-cover w-full h-full dark:block"
-              src="{{asset('img/close-homem-cortando-cabelo_23-2149141758.avif')}}"
+              src="{{asset('img/fachada-salao.jpg')}}"
               alt="Office"
             />
           </div>
@@ -43,7 +43,7 @@
                 Login SGASB
               </h1>
 
-              <form action="" method="post">
+              <form>
                   @csrf
               <label class="block text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Email</span>

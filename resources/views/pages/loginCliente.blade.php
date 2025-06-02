@@ -24,14 +24,14 @@
           <div class="h-32 md:h-auto md:w-1/2">
             <img
               aria-hidden="true"
-              class="object-cover w-full h-full dark:hidden"
-              src="{{asset('img/bg.jpg')}}"
+              class="w-full dark:hidden"
+              src="{{asset('img/close-homem-cortando-cabelo_23-2149141758.jpg')}}" height="10rem"
               alt="Office"
             />
             <img
               aria-hidden="true"
-              class="hidden object-cover w-full h-full dark:block"
-              src="{{asset('img/close-homem-cortando-cabelo_23-2149141758.avif')}}"
+              class="hidden w-full dark:block"
+              src="{{asset('img/close-homem-cortando-cabelo_23-2149141758.jpg')}}" height="10rem"
               alt="Office"
             />
           </div>
@@ -42,7 +42,7 @@
               >
                 Login SGASB
               </h1>
-              <form action="" method="post">
+              <form action="{{ route('cliente.login') }}" method="POST" class="space-y-4">
                   @csrf
               <label class="block text-sm">
                 <span class="text-gray-700 dark:text-gray-400">Email</span>
@@ -67,7 +67,6 @@
               <button
               type="submit"
                 class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-700 border border-transparent rounded-lg active:bg-purple-700 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-                href="{{route('dashCliente')}}"
               >
                 Log in
               </button>
@@ -90,6 +89,11 @@
               </p>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+      @if($errors->any())
+  <div class="alert alert-danger">
+    <p style="color: aliceblue">{{ $errors->first() }}</p>
+  </div>
+@endif
             </div>
           </div>
         </div>
